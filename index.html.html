@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>🎄 Merry Christmas 🎄</title>
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(#b11226,#7a0c1b);
+color:white;
+text-align:center;
+}
+.page{display:none;min-height:100vh;padding:40px 20px;}
+.active{display:block;}
+.card{
+background:white;
+color:black;
+max-width:360px;
+margin:auto;
+padding:25px;
+border-radius:25px;
+}
+button{
+background:#b11226;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:20px;
+font-size:16px;
+margin-top:15px;
+}
+img{
+max-width:90%;
+border-radius:20px;
+margin-top:20px;
+}
+input{
+padding:10px;
+border-radius:12px;
+border:1px solid #ccc;
+width:80%;
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+<source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kevin_MacLeod/Christmas/Kevin_MacLeod_-_Deck_the_Halls.mp3">
+</audio>
+
+<div id="login" class="page active">
+  <div class="card">
+    <h2>🎄 Christmas 2026 🎄</h2>
+    <p>اكتبي الباسورد يا منه ❤️</p>
+    <input type="password" id="pass" placeholder="Password">
+    <br>
+    <button onclick="check()">Unlock 🔒</button>
+    <p id="err"></p>
+  </div>
+</div>
+
+<div id="morning" class="page">
+  <h1>🌸 صباح الخير يا منه 🌸</h1>
+  <button onclick="nextPage()">كملي ❤️</button>
+</div>
+
+<div id="message" class="page">
+  <div class="card">
+    <h3>❤️ من محمود لمنه ❤️</h3>
+    <p>
+سنه خلصت ونا بحبك وسنه هتدأ ونا بحبكككك اكتر 💖<br><br>
+عموما م مستني يوم زي دا عشن أقولك كدا لان وانتي معايا انا كل يوم ف عيد 🎄<br><br>
+بصي بقا انا بحبكك اويي وبحبك اكتر من نفسي وبعشقك حرفيا 🥺❤️<br><br>
+وربنا ميحرمنيش منك ابدا ينور عيوني وانتي اقرب ليا من نفسي 🌹<br><br>
+بحيك اويي اويي اويي 😍<br><br>
+وبحبك يا ام العيال اكتر من نفسي والله 💍<br><br>
+انتي حاجة اساسية في حياتي ومينفعش يوم يعدي من غيرك 💕<br><br>
+حياتي ملهاش معنى غير بيكي 🌙
+    </p>
+    <img src="love.png">
+  </div>
+</div>
+
+<script>
+function check(){
+ if(document.getElementById("pass").value==="11/09"){
+   document.getElementById("login").classList.remove("active");
+   document.getElementById("morning").classList.add("active");
+ }else{
+   document.getElementById("err").innerHTML="❌ باسورد غلط";
+ }
+}
+function nextPage(){
+ document.getElementById("morning").classList.remove("active");
+ document.getElementById("message").classList.add("active");
+}
+</script>
+
+</body>
+</html>
